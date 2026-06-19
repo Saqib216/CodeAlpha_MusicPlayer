@@ -46,6 +46,7 @@ const currentSong = new Audio();
 let isPlaying = false;
 let currentIndex = 0;
 currentSong.volume = 0.5;
+let previousVolume = 0.5;
 
 const albumImage = document.querySelector(".album-img");
 const songName = document.querySelector(".song-name");
@@ -82,13 +83,19 @@ function formatTime(seconds) {
 }
 
 function loadSong(index) {
-    currentSong.src = songs[index].src;
+    albumImage.classList.add("changing");
 
-    albumImage.src = songs[index].cover;
+    setTimeout(() => {
+        currentSong.src = songs[index].src;
 
-    songName.innerHTML = songs[index].title;
+        albumImage.src = songs[index].cover;
 
-    artistName.innerHTML = songs[index].artist;
+        songName.innerHTML = songs[index].title;
+
+        artistName.innerHTML = songs[index].artist;
+
+        albumImage.classList.remove("changing");
+    }, 300);
 
     highlightCurrentSong();
 }
@@ -161,7 +168,7 @@ function highlightCurrentSong() {
 }
 
 function main() {
-    let previousVolume;
+    volumeRange.value = 50;
 
     loadSong(currentIndex);
 

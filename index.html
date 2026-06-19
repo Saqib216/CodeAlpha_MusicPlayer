@@ -14,42 +14,48 @@
 
 <body>
     <div class="music-player">
-        <div class="player-card">
-            <img src="" alt="" class="album-img">
 
-            <h2 class="song-name">Sitaare</h2>
-            <p class="artist-name">Arijit Singh</p>
+        <div class="player-container">
+            <div class="player-card">
 
-            <div class="seek-bar">
-                <div class="seek-progress"></div>
-            </div>
+                <img src="" alt="" class="album-img">
 
-            <div class="time-display">
-                <span class="current-time">00:00</span>
-                <span class="total-time">00:00</span>
-            </div>
+                <h2 class="song-name">Sitaare</h2>
+                <p class="artist-name">Arijit Singh</p>
 
-            <div class="control-buttons">
-                <div class="prev-button"><i class="fa-solid fa-backward-step"></i></div>
-                <div class="play-button"><i class="fa-solid fa-play"></i>
+                <div class="seekBar-container">
+                    <div class="seek-bar">
+                        <div class="seek-progress"></div>
+                    </div>
                 </div>
-                <div class="next-button"><i class="fa-solid fa-forward-step"></i>
+
+                <div class="time-display">
+                    <span class="current-time">00:00</span>
+                    <span class="total-time">00:00</span>
+                </div>
+
+                <div class="control-buttons">
+                    <div class="prev-button"><i class="fa-solid fa-backward-step"></i></div>
+                    <div class="play-button"><i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="next-button"><i class="fa-solid fa-forward-step"></i>
+                    </div>
+                </div>
+
+                <div class="volume">
+                    <div class="volume-icon"><i class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <input type="range" class="volume-range">
                 </div>
             </div>
 
-            <div class="volume">
-                <div class="volume-icon"><i class="fa-solid fa-volume-high"></i>
-                </div>
-                <input type="range" class="volume-range">
+            <div class="playlist">
+                <h2>Up Next</h2>
+                <ul class="songs-list"></ul>
             </div>
-        </div>
-
-        <div class="playlist">
-            <h2>Up Next</h2>
-            <ul class="songs-list"></ul>
         </div>
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 
