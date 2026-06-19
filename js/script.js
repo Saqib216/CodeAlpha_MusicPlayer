@@ -89,6 +89,8 @@ function loadSong(index) {
     songName.innerHTML = songs[index].title;
 
     artistName.innerHTML = songs[index].artist;
+
+    highlightCurrentSong();
 }
 
 function playPause() {
@@ -133,7 +135,7 @@ function renderPlaylist() {
     songs.forEach((song, index) => {
         let li = document.createElement("li");
         li.innerHTML = `
-            <p class = "song-number"> ${index+1} </p>
+            <p class = "song-number"> ${index + 1} </p>
             <div class = "song-title"> ${songs[index].title} </div>
             <div class = "artist" > ${songs[index].artist} </div>
         `;
@@ -143,9 +145,19 @@ function renderPlaylist() {
             loadSong(currentIndex);
             playPause();
         });
-
-        songsList.append(li);        
+        songsList.append(li);
     });
+}
+
+function highlightCurrentSong() {
+    const songListLi_s = document.querySelectorAll(".songs-list li");
+
+    songListLi_s.forEach((li, index) => {
+        li.classList.remove("playing");
+        if (index === currentIndex) {
+            li.classList.add("playing");
+        }
+    })
 }
 
 function main() {
