@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-from: #0a0a0a;
     --bg-to: #1a0533;
@@ -135,10 +139,6 @@ body {
     transition: height 0.2s ease;
 }
 
-.seek-bar:hover {
-    height: 6px;
-}
-
 .seek-progress {
     height: 100%;
     width: 0%;
@@ -163,12 +163,6 @@ body {
     transition: color 0.2s ease, transform 0.15s ease;
 }
 
-.prev-button:hover,
-.next-button:hover {
-    color: var(--text-primary);
-    transform: scale(1.1);
-}
-
 .play-button {
     width: 56px;
     height: 56px;
@@ -181,11 +175,6 @@ body {
     color: #0a0a0a;
     cursor: pointer;
     transition: transform 0.15s ease, background 0.2s ease;
-}
-
-.play-button:hover {
-    transform: scale(1.08);
-    background: #c9a7ff;
 }
 
 .volume {
@@ -265,14 +254,54 @@ body {
     flex: 1;
 }
 
-.songs-list li:hover {
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--text-primary);
-}
-
 .songs-list li.playing {
     color: var(--accent);
     background: rgba(179, 136, 255, 0.1);
+}
+
+@media (hover: hover) {
+    .seek-bar:hover {
+        height: 7px;
+    }
+
+    .prev-button:hover,
+    .next-button:hover {
+        color: var(--text-primary);
+        transform: scale(1.1);
+    }
+
+    .play-button:hover {
+        transform: scale(1.08);
+        background: #c9a7ff;
+    }
+
+    .songs-list li:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text-primary);
+    }
+}
+
+/* Mobile Touch & Active States Feedback */
+.seek-bar:active {
+    height: 7px;
+}
+
+.prev-button:active,
+.next-button:active {
+    color: var(--accent);
+    transform: scale(0.92);
+    transition: transform 0.1s ease;
+}
+
+.play-button:active {
+    transform: scale(0.96);
+    background: #9575cd;
+    transition: transform 0.1s ease;
+}
+
+.songs-list li:active {
+    background: rgba(179, 136, 255, 0.15);
+    color: var(--text-primary);
 }
 
 @media screen and (max-width: 768px) {
