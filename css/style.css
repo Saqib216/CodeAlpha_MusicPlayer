@@ -25,7 +25,33 @@ body {
     color: var(--text-primary);
 }
 
+.top-branding {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'General Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    pointer-events: none;
+}
+
+.top-branding span {
+    color: var(--accent);
+    font-weight: 700;
+}
+
 .music-player {
+    margin-top: 40px;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -250,14 +276,19 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .top-branding {
+        margin-top: 5px;
+        top: 0;
+        display: inline-block;
+    }
 
     .player-container {
-        flex-direction: column; 
-        max-width: 400px; 
+        flex-direction: column;
+        max-width: 400px;
     }
 
     .player-card {
-        width: 100%; 
+        width: 100%;
     }
 
     .playlist {
@@ -265,21 +296,24 @@ body {
     }
 
     .album-img {
-        width: 150px; 
+        width: 150px;
         height: 150px;
     }
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgb(28, 22, 22);
 }
+
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent);
 }
@@ -298,7 +332,13 @@ body::before {
     opacity: 0.3;
     animation: floatingGlow 8s infinite alternate ease-in-out;
 }
+
 @keyframes floatingGlow {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 30px) scale(1.2); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 30px) scale(1.2);
+    }
 }
