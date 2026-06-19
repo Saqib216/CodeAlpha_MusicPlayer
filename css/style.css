@@ -269,3 +269,36 @@ body {
         height: 150px;
     }
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--accent);
+    filter: blur(150px);
+    border-radius: 50%;
+    z-index: -1;
+    top: 20%;
+    left: 30%;
+    opacity: 0.3;
+    animation: floatingGlow 8s infinite alternate ease-in-out;
+}
+@keyframes floatingGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 30px) scale(1.2); }
+}
