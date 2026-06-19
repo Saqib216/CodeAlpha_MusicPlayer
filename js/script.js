@@ -95,9 +95,8 @@ function loadSong(index) {
         artistName.innerHTML = songs[index].artist;
 
         albumImage.classList.remove("changing");
+        highlightCurrentSong();
     }, 300);
-
-    highlightCurrentSong();
 }
 
 function playPause() {
@@ -123,7 +122,9 @@ function nextSong() {
 
     loadSong(currentIndex);
     isPlaying = false;
-    playPause();
+    setTimeout(() => {
+        playPause(); // due to setTimeout() in loadSong().
+    }, 300);
 }
 
 function previousSong() {
@@ -134,7 +135,9 @@ function previousSong() {
 
     loadSong(currentIndex);
     isPlaying = false;
-    playPause();
+    setTimeout(() => {
+        playPause();
+    }, 300);
 }
 
 function renderPlaylist() {
@@ -150,7 +153,9 @@ function renderPlaylist() {
             currentIndex = index;
             isPlaying = false;
             loadSong(currentIndex);
-            playPause();
+            setTimeout(() => {
+                playPause();
+            }, 300);
         });
         songsList.append(li);
     });

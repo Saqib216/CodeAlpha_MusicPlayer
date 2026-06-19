@@ -206,6 +206,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
+    height: 90%;
     gap: 4px;
 }
 
@@ -246,4 +247,25 @@ body {
 .songs-list li.playing {
     color: var(--accent);
     background: rgba(179, 136, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+
+    .player-container {
+        flex-direction: column; 
+        max-width: 400px; 
+    }
+
+    .player-card {
+        width: 100%; 
+    }
+
+    .playlist {
+        max-height: 400px
+    }
+
+    .album-img {
+        width: 150px; 
+        height: 150px;
+    }
 }
