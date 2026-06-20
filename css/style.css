@@ -361,8 +361,7 @@ body::before {
     }
 
     body::before {
-        width: 100px;
-        height: 100px;
+        content: none;
     }
 
     /* Sliding overlay functionality for mobile screens */
