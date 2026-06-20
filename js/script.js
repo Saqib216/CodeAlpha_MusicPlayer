@@ -263,12 +263,15 @@ function main() {
     // For sliding overlay functionality on mobile devices:
     const playerCard = document.querySelector(".player-card");
     const closeBtn = document.querySelector(".close-player");
+    const showBtn = document.querySelector(".show-player");
 
     if (window.innerWidth > 768) {
         closeBtn.style.opacity = "0";
+        showBtn.style.opacity = "0";
     }
     else {
         closeBtn.style.opacity = "1";
+        showBtn.style.opacity = "1";
     }
 
     songsList.addEventListener("click", (e) => {
@@ -279,6 +282,10 @@ function main() {
 
     closeBtn.addEventListener("click", (e) => {
         playerCard.classList.remove("active");
+    });
+
+    showBtn.addEventListener("click", (e) => {
+        playerCard.classList.add("active");
     });
 }
 
