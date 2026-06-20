@@ -23,7 +23,7 @@ html {
 body {
     font-family: var(--font);
     background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@ body {
 .music-player {
     margin-top: 40px;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -364,7 +364,7 @@ body::before {
     /* Sliding overlay functionality for mobile screens */
     .player-container {
         flex-direction: column;
-        height: 100vh;
+        height: 80vh;
         overflow: hidden;
         position: relative;
     }
@@ -383,7 +383,7 @@ body::before {
     }
 
     .playlist {
-        margin-top: 40px;
+        margin-top: 5px;
         width: 100%;
         min-height: 60vh;
         max-height: 72vh;
