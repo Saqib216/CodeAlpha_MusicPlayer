@@ -348,6 +348,10 @@ body::before {
 }
 
 @media screen and (max-width: 768px) {
+    .music-player{
+        margin-top: 0;
+    }
+
     .top-branding {
         display: inline-block;
     }
@@ -364,7 +368,7 @@ body::before {
     /* Sliding overlay functionality for mobile screens */
     .player-container {
         flex-direction: column;
-        height: 80vh;
+        height: 74vh;
         overflow: hidden;
         position: relative;
     }
@@ -385,7 +389,7 @@ body::before {
     .playlist {
         width: 100%;
         min-height: 60vh;
-        max-height: 60vh;
+        max-height: 62vh;
         border-radius: 10px;
     }
 
