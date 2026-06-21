@@ -350,14 +350,14 @@ body::before {
 @media screen and (max-width: 768px) {
     body {
         overflow: hidden;
-        height: 100dvh; 
+        height: 100dvh;
     }
 
     .music-player {
         margin-top: 0;
         overflow: hidden;
         height: 100dvh;
-        align-items: flex-end; 
+        align-items: flex-end;
     }
 
     .top-branding {
@@ -380,8 +380,8 @@ body::before {
         width: 100%;
         overflow: hidden;
         position: relative;
-        padding-top: 60px; 
-        padding-bottom: 70px; 
+        padding-top: 60px;
+        padding-bottom: 70px;
     }
 
     .playlist {
@@ -393,20 +393,20 @@ body::before {
 
     .player-card {
         position: fixed;
-        bottom: -105dvh; 
+        bottom: -105dvh;
         left: 0;
         width: 100vw;
-        height: 100dvh; 
+        height: 100dvh;
         border-radius: 0;
         z-index: 999;
-        padding: 60px 28px 40px 28px; 
+        padding: 60px 28px 40px 28px;
         justify-content: center;
         transition: bottom 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     .close-player {
         position: absolute;
-        top: 30px; 
+        top: 30px;
         left: 25px;
         font-size: 24px;
         color: var(--text-secondary);
@@ -415,7 +415,7 @@ body::before {
 
     .show-player {
         position: fixed;
-        bottom: max(15px, env(safe-area-inset-bottom)); 
+        bottom: max(15px, env(safe-area-inset-bottom));
         left: 50%;
         transform: translateX(-50%);
         font-size: 24px;
